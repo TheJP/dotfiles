@@ -1,0 +1,74 @@
+[theme]
+name = "solarized-dark"
+[theme.overrides]
+separator = "<span rise='-32000' font='14'></span>"
+
+[icons]
+name = "awesome"
+[icons.overrides]
+memory_mem = " "
+cpu = " "
+gpu = ""
+update = " "
+
+# https://github.com/greshake/i3status-rust/blob/master/blocks.md
+
+[[block]]
+block = "focused_window"
+max_width = 200
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = ""
+info_type = "available"
+unit = "GB"
+interval = 60
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "memory"
+icons = true
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 3
+
+[[block]]
+block = "load"
+interval = 3
+format = "{1m}"
+
+[[block]]
+block = "nvidia_gpu"
+show_utilization = true
+show_memory = false
+show_temperature = true
+show_fan_speed = false
+show_clocks = false
+interval = 3
+
+[[block]]
+block = "pacman"
+interval = 3600
+format = "{count}"
+format_singular = "{count}"
+# format_up_to_date = ""
+
+# [[block]]
+# block = "weather"
+# format = "{weather} ({location}) {temp}°, {wind} m/s {direction}"
+# service = { name = "openweathermap", api_key = "XXX", city_id = "5398563", units = "metric" }
+
+[[block]]
+block = "sound"
+step_width = 1
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %Y-%m-%d %R"

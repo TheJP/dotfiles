@@ -1,0 +1,3 @@
+DolphinViewContainer > DolphinView > QAbstractScrollArea {
+      border: 0;
+}

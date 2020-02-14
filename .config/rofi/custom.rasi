@@ -1,0 +1,141 @@
+/************************************************
+ * ROFI Color theme
+ * User: JP
+ * Modified of Original from: leofa
+ ***********************************************/
+
+configuration {
+	display-drun: "";
+	display-run: "";
+	display-window: "";
+	display-ssh: "~#";
+    show-icons: false;
+    icon-theme: "Papirus";
+	sidebar-mode: false;
+    font: "Inconsolata 30";
+}
+
+* {
+    foreground: rgba(196, 203, 212, 100%);
+    background: rgba(22, 24, 30, 85%);
+    item-background: transparent;
+    normal-foreground: @foreground;
+    normal-background: @item-background;
+    selected-normal-foreground: rgba(52, 190, 91, 100%);
+    selected-normal-background: @item-background;
+    active-foreground: rgba(101, 172, 255, 100%);
+    active-background: @item-background;
+    selected-active-foreground: rgba(52, 190, 91, 100%);
+    selected-active-background: @item-background;
+    urgent-foreground: rgba(204, 102, 102, 100%);
+    urgent-background: @item-background;
+    selected-urgent-foreground: rgba(52, 190, 91, 100%);
+    selected-urgent-background: @item-background;
+    separatorcolor: rgba(29, 31, 33, 100%);
+    background-color: rgba(0, 0, 0, 0%);
+    big-font: "Inconsolata 50";
+    text-color: @normal-foreground;
+    spacing: 0;
+}
+
+window {
+    fullscreen: true;
+    background-color: @background;
+    padding: 5px;
+    transparency: "real";
+}
+
+mainbox {
+    border:  0;
+    padding: 25% 30%;
+}
+
+message {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+textbox {
+    text-color: @foreground;
+}
+
+listview {
+    scrollbar: false;
+    padding: 1em;
+    // columns: 2;
+}
+
+element {
+    padding: 30px 20px;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color: @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+mode-switcher {
+    border: 2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+button.selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+inputbar {
+    children: [prompt,textbox-prompt-space,entry,case-indicator];
+}
+
+prompt {
+    font: @big-font;
+}
+
+textbox-prompt-space {
+    expand: false;
+    margin: 0 0.8em 0 0;
+}
+
+entry {
+    font: @big-font;
+}
