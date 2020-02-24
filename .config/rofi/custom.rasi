@@ -12,7 +12,7 @@ configuration {
     show-icons: false;
     icon-theme: "Papirus";
 	sidebar-mode: false;
-    font: "Inconsolata 30";
+    font: "Inconsolata 20";
 }
 
 * {
@@ -33,7 +33,7 @@ configuration {
     selected-urgent-background: @item-background;
     separatorcolor: rgba(29, 31, 33, 100%);
     background-color: rgba(0, 0, 0, 0%);
-    big-font: "Inconsolata 50";
+    big-font: "Inconsolata 40";
     text-color: @normal-foreground;
     spacing: 0;
 }
@@ -47,7 +47,7 @@ window {
 
 mainbox {
     border:  0;
-    padding: 25% 30%;
+    padding: 20% 30%;
 }
 
 message {
